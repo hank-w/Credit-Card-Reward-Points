@@ -1,0 +1,19 @@
+<div class="container">
+  <div *ngIf="rulesDetails">
+    <div><b>Rules List Name:</b> {{ rulesDetails.rulesListName }}</div>
+    <br />
+    <div><b>Rules:</b></div>
+    <div *ngFor="let rule of rulesDetails.rulesList" class="indent">
+      <div>Rule No: {{ rule.ruleId }}</div>
+      <div>Points: {{ rule.points }}</div>
+      <div>Conditions:</div>
+      <div *ngFor="let condition of rule.conditions" class="indent">
+        <div>
+          Merchant Code: {{ getmerchantName(condition.merchantCode) }} &
+          Purchase Amount: {{ condition.purchaseAmount }}
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>

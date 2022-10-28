@@ -1,0 +1,34 @@
+{
+  "name": "co-ccrps-be",
+  "version": "1.0.0",
+  "description": "Credit Card Reward Point System Backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "nyc jasmine --config=jasmine.json --testTimeout=10000",
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
+  },
+  "keywords": [
+    "MEAN",
+    "Stack",
+    "MongoDB",
+    "ExpressJS",
+    "Angular",
+    "NodeJS",
+    "FinTech"
+  ],
+  "author": "Hank Wu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "jasmine": "^4.0.2",
+    "mongodb-memory-server": "^8.3.0",
+    "mongoose": "^6.1.9",
+    "nyc": "^15.1.0",
+    "supertest": "^6.2.2"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js"
+    ]
+  }
+}
